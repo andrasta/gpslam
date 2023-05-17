@@ -16,10 +16,10 @@ find_package(GTSAM REQUIRED) # Uses installed package
 include_directories(${GTSAM_INCLUDE_DIR})
 set(GTSAM_LIBS gtsam)
 
-find_package(GTSAMCMakeTools)
-include(GtsamMakeConfigFile)
-include(GtsamBuildTypes)
-include(GtsamTesting)
+# find_package(GTSAMCMakeTools)
+# include(GtsamMakeConfigFile)
+# include(GtsamBuildTypes)
+# include(GtsamTesting)
 
 # options
 option(GPSLAM_BUILD_MATLAB_TOOLBOX "whether build matlab toolbox" OFF)
@@ -52,6 +52,6 @@ if(GPSLAM_BUILD_MATLAB_TOOLBOX)
 endif()
 
 # Install config and export files
-GtsamMakeConfigFile(gpslam)
-export(TARGETS ${gpslam_EXPORTED_TARGETS} FILE gpslam-exports.cmake)
+# GtsamMakeConfigFile(gpslam)
+# export(TARGETS ${gpslam_EXPORTED_TARGETS} FILE gpslam-exports.cmake)
 
